@@ -26,7 +26,6 @@ html {
   --black: #000;
   --dark: rgb(37, 37, 37);
   --light-dark: rgb(53, 53, 53);
-  --brand-color: #ffcc33;
 
   box-sizing: border-box;
   font-family: 'Roboto Mono', sans-serif;
@@ -58,6 +57,7 @@ body.light {
 }
 
 input,
+label,
 button {
   cursor: pointer;
   font-size: inherit;
@@ -76,13 +76,12 @@ a {
 }
 
 a:hover {
-  color: var(--brand-color);
   transition: 0.3s;
 }
 
 ::selection {
   background-color: transparent;
-  color: var(--brand-color);
+  color: rgba(26, 118, 255, 0.644);
 }
 
 /* ------------------------------------
@@ -119,6 +118,51 @@ header {
   color: var(--light-dark);
 }
 
+.header__social-link:hover {
+  color: var(--color);
+}
+
+.theme-container {
+  flex: 1;
+  text-align: right;
+}
+
+#theme-checkbox {
+  display: none;
+}
+
+.fake-theme-checkbox {
+  position: relative;
+  display: inline-block;
+  width: 3em;
+  height: 1.6em;
+  border-radius: 1em;
+  border: 0.1em solid var(--light-dark);
+}
+
+.fake-theme-checkbox::before {
+  content: '';
+  position: absolute;
+  left: 8%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 50%;
+  background-color: var(--light-dark);
+}
+
+#theme-checkbox:checked + .fake-theme-checkbox::before {
+  left: 51%;
+}
+
+.fake-theme-checkbox:hover {
+  border-color: var(--color);
+}
+.fake-theme-checkbox:hover::before {
+  background-color: var(--color);
+}
+
 /* ------------------------------------
 * --------------------------
 * Main
@@ -138,12 +182,43 @@ main {
   align-items: center;
 }
 
+.main__tab-list button {
+  border: none;
+  margin: 1em 0;
+  padding: 0.2em 0.4em;
+  text-decoration: underline;
+  background: transparent;
+}
+
+.main__tab-list button:hover {
+  color: var(--color);
+}
+
+.main__tab-list button:active {
+  opacity: 0.6;
+  transition: 0.02s;
+}
+
 /* -----------
 * sections
 */
 
+section {
+  display: block;
+}
+
 section.hidden {
   display: none;
+}
+
+.works__link-list a {
+  display: inline-block;
+  margin: 0.3em 0;
+}
+
+.works__link-list a:hover {
+  transform: translate(3px, -3px);
+  opacity: 0.5;
 }
 
 /* -----------
@@ -162,6 +237,7 @@ section.hidden {
 footer {
   padding: 1.4em 0;
   border-top: 0.1em solid var(--dark);
+  opacity: 0.7;
 }
 
 .footer__quote {
