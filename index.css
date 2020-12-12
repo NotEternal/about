@@ -24,10 +24,11 @@
 html {
   --white: #fff;
   --black: #000;
-  --dark: rgb(26, 26, 26);
+  --dark: rgb(37, 37, 37);
   --brand-color: #ffcc33;
 
   box-sizing: border-box;
+  font-family: 'Roboto Mono', sans-serif;
 }
 
 *,
@@ -35,9 +36,13 @@ html {
 *::after {
   box-sizing: inherit;
   outline: none;
+  transition: 0.25s;
 }
 
 body {
+  margin: 0;
+  padding: 0 20%;
+
   --background-color: var(--black);
   --color: var(--white);
 
@@ -48,14 +53,81 @@ body {
 body.light {
   --background-color: var(--white);
   --color: var(--black);
-
-  background-color: var(--background-color);
-  color: var(--color);
 }
 
+input,
 button {
   cursor: pointer;
   font-size: inherit;
   font-weight: inherit;
   font-family: inherit;
+}
+
+a {
+  color: var(--color);
+}
+
+a:hover {
+  color: var(--brand-color);
+  transition: 0.3s;
+}
+
+::selection {
+  background-color: transparent;
+  color: var(--brand-color);
+}
+
+/* -----------
+* header
+*/
+
+header {
+  padding: 1.4em 0;
+  display: flex;
+  align-items: center;
+  border-bottom: 0.1em solid var(--dark);
+}
+
+.header__logo {
+  width: 4em;
+  height: 4em;
+  fill: var(--dark);
+}
+
+.header__my-info {
+  margin-left: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.header__link-title {
+  margin: 0.4em 0;
+  opacity: 0.9;
+}
+
+.header__social-link {
+  text-decoration: underline;
+  color: var(--dark);
+}
+
+/* -----------
+* main
+*/
+
+main {
+  padding: 3em 0;
+}
+
+/* -----------
+* footer
+*/
+
+footer {
+  padding: 1.4em 0;
+  border-top: 0.1em solid var(--dark);
+}
+
+.footer__quote {
+  margin: 0;
+  color: var(--dark);
 }
