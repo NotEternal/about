@@ -25,10 +25,12 @@ html {
   --white: #fff;
   --black: #000;
   --dark: rgb(37, 37, 37);
+  --light-dark: rgb(53, 53, 53);
   --brand-color: #ffcc33;
 
   box-sizing: border-box;
   font-family: 'Roboto Mono', sans-serif;
+  font-size: 1.2em;
 }
 
 *,
@@ -63,6 +65,12 @@ button {
   font-family: inherit;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 a {
   color: var(--color);
 }
@@ -77,8 +85,9 @@ a:hover {
   color: var(--brand-color);
 }
 
-/* -----------
-* header
+/* ------------------------------------
+* --------------------------
+* Header
 */
 
 header {
@@ -91,7 +100,7 @@ header {
 .header__logo {
   width: 4em;
   height: 4em;
-  fill: var(--dark);
+  fill: var(--light-dark);
 }
 
 .header__my-info {
@@ -101,25 +110,53 @@ header {
 }
 
 .header__link-title {
-  margin: 0.4em 0;
-  opacity: 0.9;
+  display: inline-block;
+  margin: 0.2em 0;
 }
 
 .header__social-link {
   text-decoration: underline;
-  color: var(--dark);
+  color: var(--light-dark);
 }
 
-/* -----------
-* main
+/* ------------------------------------
+* --------------------------
+* Main
 */
 
 main {
   padding: 3em 0;
+  font-size: 1.2em;
 }
 
 /* -----------
-* footer
+* tabs
+*/
+
+.main__tab-list {
+  display: flex;
+  align-items: center;
+}
+
+/* -----------
+* sections
+*/
+
+section.hidden {
+  display: none;
+}
+
+/* -----------
+* hints
+*/
+
+.tooltip {
+  display: none;
+}
+
+/* ------------------------------------
+* --------------------------
+* Footer
 */
 
 footer {
