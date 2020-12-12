@@ -24,8 +24,6 @@
 html {
   --white: #fff;
   --black: #000;
-  --dark: rgb(37, 37, 37);
-  --light-dark: rgb(53, 53, 53);
 
   box-sizing: border-box;
   font-family: 'Roboto Mono', sans-serif;
@@ -44,6 +42,8 @@ body {
   margin: 0;
   padding: 0 20%;
 
+  --dark: rgb(37, 37, 37);
+  --light-dark: rgb(53, 53, 53);
   --background-color: var(--black);
   --color: var(--white);
 
@@ -52,6 +52,8 @@ body {
 }
 
 body.light {
+  --dark: rgb(78, 78, 78);
+  --light-dark: rgb(143, 143, 143);
   --background-color: var(--white);
   --color: var(--black);
 }
@@ -204,11 +206,11 @@ main {
 */
 
 section {
-  display: block;
+  display: none;
 }
 
-section.hidden {
-  display: none;
+section.show {
+  display: block;
 }
 
 .works__link-list a {

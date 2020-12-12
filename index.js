@@ -12,6 +12,12 @@ document.querySelector('#theme-checkbox').addEventListener('click', () => {
  * tabs
  */
 
-const sectionTabs = document.querySelectorAll('.main__tab-list button');
+const sections = [...document.querySelectorAll('section')];
+const sectionTabs = [...document.querySelectorAll('.main__tab-list button')];
 
-//
+sectionTabs.forEach((tab) => {
+  tab.addEventListener('click', () => {
+    document.querySelector('section.show').classList.remove('show');
+    sections[sectionTabs.indexOf(tab)].classList.add('show');
+  });
+});
