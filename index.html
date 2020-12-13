@@ -1,23 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>About</title>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="index.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
 
-  <body>
-    <header>
-      <svg
-        class="header__logo"
-        xmlns="http://www.w3.org/2000/svg"
-        x="0px"
-        y="0px"
-        viewBox="0 0 106.059 106.059"
-      >
-        <path
-          d="M90.544,90.542c20.687-20.685,20.684-54.342,0.002-75.024C69.858-5.172,36.198-5.172,15.515,15.513
+<head>
+  <title>About</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="index.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <header>
+    <svg class="header__logo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+      viewBox="0 0 106.059 106.059">
+      <path d="M90.544,90.542c20.687-20.685,20.684-54.342,0.002-75.024C69.858-5.172,36.198-5.172,15.515,15.513
          C-5.173,36.198-5.171,69.858,15.517,90.547C36.198,111.23,69.858,111.23,90.544,90.542z M21.302,21.3
          C38.795,3.807,67.261,3.805,84.759,21.302c17.494,17.494,17.492,45.962-0.002,63.455c-17.494,17.494-45.962,17.496-63.455,0.002
          C3.804,67.263,3.806,38.794,21.302,21.3z M23.769,39.805c0-1.738,1.409-3.147,3.147-3.147l13.373-0.001
@@ -28,108 +23,83 @@
          c-1.188-1.188-1.782-2.736-1.807-4.292h-7.333C64.031,43.046,62.621,41.637,62.621,39.898z M33.445,65.561
          c9.859,0.311,32.958,1.909,34.469,10.011c0.253,1.357-0.643,2.663-2,2.916c-0.154,0.029-0.309,0.043-0.461,0.043
          c-1.181,0-2.23-0.84-2.455-2.042c-0.005-0.025-1.085-2.695-14.428-4.593c-7.637-1.086-15.207-1.334-15.283-1.337
-         c-1.38-0.043-2.463-1.197-2.42-2.577c0.043-1.354,1.152-2.421,2.498-2.421C33.391,65.559,33.417,65.56,33.445,65.561z"
-        />
-      </svg>
-      <div class="header__my-info">
-        <span
-          ><span class="header__link-title">github:</span>
-          <a class="header__social-link" href="https://github.com/NotEternal"
-            >noteternal</a
-          ></span
-        >
-        <span
-          ><span class="header__link-title">email:</span>
-          <a class="header__social-link" href="mailto: n0tEternal@ya.ru"
-            >n0tEternal@ya.ru</a
-          ></span
-        >
-      </div>
-      <div class="theme-container">
-        <input type="checkbox" id="theme-checkbox" />
-        <label for="theme-checkbox" class="fake-theme-checkbox"></label>
-      </div>
-    </header>
+         c-1.38-0.043-2.463-1.197-2.42-2.577c0.043-1.354,1.152-2.421,2.498-2.421C33.391,65.559,33.417,65.56,33.445,65.561z" />
+    </svg>
+    <div class="header__my-info">
+      <span><span class="header__link-title">github:</span>
+        <a class="header__social-link" href="https://github.com/NotEternal">noteternal</a></span>
+      <span><span class="header__link-title">email:</span>
+        <a class="header__social-link" href="mailto: n0tEternal@ya.ru">n0tEternal@ya.ru</a></span>
+    </div>
+    <div class="theme-container">
+      <input type="checkbox" id="theme-checkbox" />
+      <label for="theme-checkbox" class="fake-theme-checkbox"></label>
+    </div>
+  </header>
+  <main>
+    <aside class="section-tabs-wrapper">
+      <ul class="main__tab-list">
+        <li><button>Works</button></li>
+        <li><button>About</button></li>
+      </ul>
+    </aside>
+    <section class="works show">
+      <h2>Maybe someone is interested</h2>
+      <ul class="works__link-list">
+        <li>
+          <span class="tooltip">tooltip</span><a href="https://noteternal.github.io/reactKanbanBoard">Kanban
+            board</a>
+        </li>
+        <li>
+          <span class="tooltip">tooltip</span><a href="https://noteternal.github.io/reactAnimeQuotes">Anime
+            quotes</a>
+        </li>
+        <li>
+          <span class="tooltip">tooltip</span><a href="https://noteternal.github.io/searchInFile/">Search
+            in file</a>
+        </li>
+        <li>
+          <span class="tooltip">tooltip</span><a href="https://noteternal.github.io/simpleWebTemplate/">Simple
+            web template</a>
+        </li>
+        <li>
+          <span class="tooltip">tooltip</span><a href="https://noteternal.github.io/Calculator">Calculator</a>
+        </li>
+        <li>
+          <span class="tooltip">tooltip</span><a href="https://noteternal.github.io/caesarCipher">Сaesar
+            сipher</a>
+        </li>
+        <li>
+          <span class="tooltip">tooltip</span><a href="https://noteternal.github.io/Drawing">Drawing</a>
+        </li>
+      </ul>
+    </section>
+    <section class="about hidden">
+      <h2>About me</h2>
+      <p>
+        Studying web development. I mainly deal with the front-end, but I plan
+        to study the back-end technologies as well.
+      </p>
+      <h3>Stack at the moment:</h3>
+      <ul>
+        <li>HTML & CSS + BEM (necessarily)</li>
+        <li>SASS</li>
+        <li>Bootstrap (little)</li>
+        <li>JS</li>
+        <li>React</li>
+        <li>Redux</li>
+        <li>TypeScript (little)</li>
+        <li>Webpack (little)</li>
+        <li>Node (little)</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <blockquote class="footer__quote">
+      Better to be crazy than to be nobody
+    </blockquote>
+  </footer>
+  <script src="index.js"></script>
+</body>
 
-    <main>
-      <aside class="section-tabs-wrapper">
-        <ul class="main__tab-list">
-          <li><button>Works</button></li>
-          <li><button>About</button></li>
-        </ul>
-      </aside>
-
-      <section class="works show">
-        <h2>Maybe someone is interested</h2>
-        <ul class="works__link-list">
-          <li>
-            <span class="tooltip">tooltip</span
-            ><a href="https://noteternal.github.io/reactKanbanBoard"
-              >Kanban board</a
-            >
-          </li>
-          <li>
-            <span class="tooltip">tooltip</span
-            ><a href="https://noteternal.github.io/reactAnimeQuotes"
-              >Anime quotes</a
-            >
-          </li>
-          <li>
-            <span class="tooltip">tooltip</span
-            ><a href="https://noteternal.github.io/searchInFile/"
-              >Search in file</a
-            >
-          </li>
-          <li>
-            <span class="tooltip">tooltip</span
-            ><a href="https://noteternal.github.io/simpleWebTemplate/"
-              >Simple web template</a
-            >
-          </li>
-          <li>
-            <span class="tooltip">tooltip</span
-            ><a href="https://noteternal.github.io/Calculator">Calculator</a>
-          </li>
-          <li>
-            <span class="tooltip">tooltip</span
-            ><a href="https://noteternal.github.io/caesarCipher"
-              >Сaesar сipher</a
-            >
-          </li>
-          <li>
-            <span class="tooltip">tooltip</span
-            ><a href="https://noteternal.github.io/Drawing">Drawing</a>
-          </li>
-        </ul>
-      </section>
-
-      <section class="about hidden">
-        <h2>About me</h2>
-        <p>
-          Studying web development. I mainly deal with the front-end, but I plan
-          to study the back-end technologies as well.
-        </p>
-        <h3>Stack at the moment:</h3>
-        <ul>
-          <li>HTML & CSS + BEM (necessarily)</li>
-          <li>SASS</li>
-          <li>Bootstrap (little)</li>
-          <li>JS</li>
-          <li>React</li>
-          <li>Redux</li>
-          <li>TypeScript (little)</li>
-          <li>Webpack (little)</li>
-          <li>Node (little)</li>
-        </ul>
-      </section>
-    </main>
-
-    <footer>
-      <blockquote class="footer__quote">
-        Better to be crazy than to be nobody
-      </blockquote>
-    </footer>
-
-    <script src="index.js"></script>
-  </body>
 </html>

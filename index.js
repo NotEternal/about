@@ -21,3 +21,8 @@ sectionTabs.forEach((tab) => {
     sections[sectionTabs.indexOf(tab)].classList.add('show');
   });
 });
+
+
+/* -----------
+ * stats
+ */
