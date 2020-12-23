@@ -7,6 +7,7 @@
   src: url(https://fonts.gstatic.com/s/sourcecodepro/v13/HI_SiYsKILxRpg3hIP6sJ7fM7PqlOevWjMY.woff2) format('woff2');
   unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
+
 /* latin */
 @font-face {
   font-family: 'Source Code Pro';
@@ -21,6 +22,10 @@
 html {
   --white: #fff;
   --black: #000;
+  --dark: rgb(37, 37, 37);
+  --light-dark: rgb(53, 53, 53);
+  --background-color: var(--black);
+  --color: var(--white);
 
   box-sizing: border-box;
   font-family: 'Source Code Pro', sans-serif;
@@ -37,22 +42,15 @@ html {
 
 body {
   margin: 0;
-  padding: 0 20%;
-
-  --dark: rgb(37, 37, 37);
-  --light-dark: rgb(53, 53, 53);
-  --background-color: var(--black);
-  --color: var(--white);
+  padding: 0 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
 
   background-color: var(--background-color);
   color: var(--color);
-}
-
-body.light {
-  --dark: rgb(78, 78, 78);
-  --light-dark: rgb(143, 143, 143);
-  --background-color: var(--white);
-  --color: var(--black);
+  color: var(--light-dark);
 }
 
 input,
@@ -85,106 +83,24 @@ a:hover {
 
 /* ------------------------------------
 * --------------------------
-*/
-
-main {
-  height: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.dead-icons {
-  width: 11em;
-  height: 11em;
-  margin-right: 2em;
-  fill: var(--color);
-}
-
-.break-title {
-  white-space: nowrap;
-  font-size: 4em;
-}
-
-/* ------------------------------------
-* --------------------------
 * Header
 */
 
 header {
-  padding: 1.4em 0;
+  padding: 2em 0;
   display: flex;
   align-items: center;
-  border-bottom: 0.1em solid var(--dark);
 }
 
 .header__logo {
-  width: 4em;
-  height: 4em;
+  width: 4.4em;
+  height: 4.4em;
   fill: var(--light-dark);
 }
 
-.header__my-info {
-  margin-left: 2em;
-  display: flex;
-  flex-direction: column;
-}
-
-.header__link-title {
-  display: inline-block;
-  margin: 0.2em 0;
-}
-
-.header__social-link {
-  text-decoration: underline;
-  color: var(--light-dark);
-}
-
-.header__social-link:hover {
-  color: var(--color);
-}
-
-.theme-container {
-  flex: 1;
-  text-align: right;
-}
-
-#theme-checkbox {
-  display: none;
-}
-
-.fake-theme-checkbox {
-  position: relative;
-  display: inline-block;
-  width: 3em;
-  height: 1.6em;
-  border-radius: 1em;
-  border: 0.1em solid var(--light-dark);
-}
-
-.fake-theme-checkbox::before {
-  content: '';
-  position: absolute;
-  left: 8%;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 1.2em;
-  height: 1.2em;
-  border-radius: 50%;
-  background-color: var(--light-dark);
-}
-
-#theme-checkbox:checked + .fake-theme-checkbox::before {
-  left: 51%;
-}
-
-.fake-theme-checkbox:hover {
-  border-color: var(--color);
-}
-
-.fake-theme-checkbox:hover::before {
-  background-color: var(--color);
+.header__title {
+  margin: 0;
+  margin-left: .6em;
 }
 
 /* ------------------------------------
@@ -193,64 +109,13 @@ header {
 */
 
 main {
-  padding: 3em 0;
-  font-size: 1.2em;
+  padding: 10vh 0;
+  font-size: 1.4em;
 }
 
-/* -----------
-* tabs
-*/
-
-.main__tab-list {
-  display: flex;
-  align-items: center;
-}
-
-.main__tab-list button {
-  border: none;
-  margin: 1em 0;
-  padding: 0.2em 0.4em;
-  text-decoration: underline;
-  background: transparent;
-}
-
-.main__tab-list button:hover {
-  color: var(--color);
-}
-
-.main__tab-list button:active {
-  opacity: 0.6;
-  transition: 0.02s;
-}
-
-/* -----------
-* sections
-*/
-
-section {
-  display: none;
-}
-
-section.show {
-  display: block;
-}
-
-.works__link-list a {
-  display: inline-block;
-  margin: 0.3em 0;
-}
-
-.works__link-list a:hover {
-  transform: translate(3px, -3px);
-  opacity: 0.5;
-}
-
-/* -----------
-* hints
-*/
-
-.tooltip {
-  display: none;
+.skills ul {
+  margin: 0;
+  padding: 0;
 }
 
 /* ------------------------------------
@@ -260,11 +125,9 @@ section.show {
 
 footer {
   padding: 1.4em 0;
-  border-top: 0.1em solid var(--dark);
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 .footer__quote {
   margin: 0;
-  color: var(--dark);
 }
