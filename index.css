@@ -41,12 +41,13 @@ html {
 }
 
 body {
+  min-height: 100vh;
   margin: 0;
   padding: 0 25%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
 
   background-color: var(--background-color);
   color: var(--color);
@@ -81,53 +82,31 @@ a:hover {
   color: rgba(26, 118, 255, 0.644);
 }
 
-/* ------------------------------------
-* --------------------------
-* Header
-*/
+main {
+  padding: 2rem;
+  font-size: 1.4em;
+  border-radius: .3em;
+  border: .1em solid var(--light-dark);
+}
 
-header {
+.head-note {
   padding: 2em 0;
   display: flex;
   align-items: center;
 }
 
-.header__logo {
-  width: 4.4em;
-  height: 4.4em;
+.head-note__logo {
+  width: 3.6em;
+  height: 3.6em;
   fill: var(--light-dark);
 }
 
-.header__title {
+.head-note__title {
   margin: 0;
   margin-left: .6em;
-}
-
-/* ------------------------------------
-* --------------------------
-* Main
-*/
-
-main {
-  padding: 10vh 0;
-  font-size: 1.4em;
 }
 
 .skills ul {
   margin: 0;
   padding: 0;
-}
-
-/* ------------------------------------
-* --------------------------
-* Footer
-*/
-
-footer {
-  padding: 1.4em 0;
-  opacity: 0.6;
-}
-
-.footer__quote {
-  margin: 0;
 }
