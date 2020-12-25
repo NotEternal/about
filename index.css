@@ -22,9 +22,10 @@
 html {
   --white: #fff;
   --black: #000;
+  --light-black: #030303;
   --dark: rgb(37, 37, 37);
-  --light-dark: rgb(53, 53, 53);
-  --background-color: var(--black);
+  --light-dark: rgb(58, 58, 58);
+  --background-color: var(--light-black);
   --color: var(--white);
 
   box-sizing: border-box;
@@ -79,7 +80,7 @@ a:hover {
 
 ::selection {
   background-color: transparent;
-  color: rgba(26, 118, 255, 0.644);
+  color: rgba(31, 120, 255, 0.829);
 }
 
 main {
@@ -89,6 +90,7 @@ main {
 .about {
   padding: 0.2rem;
   border-radius: 0.4em;
+  box-shadow: 0 0 0.5em var(--black);
   background: linear-gradient(-45deg, rgb(140, 0, 255), rgb(0, 132, 255));
 }
 
