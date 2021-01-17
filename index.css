@@ -20,13 +20,14 @@
 }
 
 html {
-  --white: #fff;
+  --light: #fefefe;
   --black: #000;
-  --light-black: #030303;
+  --light-black: #111;
   --dark: rgb(37, 37, 37);
   --light-dark: rgb(58, 58, 58);
   --background-color: var(--light-black);
-  --color: var(--white);
+  --color: var(--light);
+  --brand-color: rgb(0, 150, 255);
 
   box-sizing: border-box;
   font-family: 'Source Code Pro', sans-serif;
@@ -52,7 +53,6 @@ body {
 
   background-color: var(--background-color);
   color: var(--color);
-  color: var(--light-dark);
 }
 
 input,
@@ -80,7 +80,7 @@ a:hover {
 
 ::selection {
   background-color: transparent;
-  color: rgba(31, 120, 255, 0.829);
+  color: var(--brand-color);
 }
 
 main {
@@ -88,28 +88,39 @@ main {
 }
 
 .about {
-  padding: 0.2rem;
-  border-radius: 0.4em;
+  padding: 0.15em;
+  border-radius: 1em;
   box-shadow: 0 0 0.5em var(--black);
-  background: linear-gradient(-45deg, rgb(140, 0, 255), rgb(0, 132, 255));
+  background: linear-gradient(-45deg, rgb(200, 200, 50), var(--brand-color));
 }
 
-.about__gradient-backgrount {
-  padding: 2rem;
-  border-radius: 0.4em;
+.about__content-wrapper {
+  border-radius: 1em;
+  box-shadow: inset 0 0 1em var(--black);
   background-color: var(--background-color);
 }
 
 .about__head-note {
-  padding: 2em 0;
+  position: relative;
+  padding: 2rem;
   display: flex;
   align-items: center;
 }
 
+.about__head-note::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.15rem;
+  background: linear-gradient(-90deg, rgb(140, 160, 30), var(--brand-color));
+}
+
 .head-note__logo {
-  width: 3.6em;
-  height: 3.6em;
-  fill: var(--light-dark);
+  width: 3.2em;
+  height: 3.2em;
+  fill: var(--color);
 }
 
 .head-note__title {
@@ -117,7 +128,10 @@ main {
   margin-left: 0.6em;
 }
 
+.about__skills {
+  padding: 2rem;
+}
+
 .about__skills ul {
   margin: 0;
-  padding: 0;
 }
