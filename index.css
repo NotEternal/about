@@ -21,13 +21,10 @@
 
 html {
   --white: #fff;
-  --light: #e5e5e5;
   --black: #000;
   --light-black: #111;
-  --dark: rgb(37, 37, 37);
-  --light-dark: rgb(58, 58, 58);
-  --background-color: var(--white);
-  --color: var(--black);
+  --background-color: var(--light-black);
+  --color: var(--white);
 
   box-sizing: border-box;
   font-family: 'Source Code Pro', sans-serif;
@@ -45,7 +42,7 @@ html {
 body {
   min-height: 100vh;
   margin: 0;
-  padding: 0 25%;
+  padding: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,20 +61,6 @@ button {
   font-family: inherit;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-a {
-  color: var(--color);
-}
-
-a:hover {
-  transition: 0.3s;
-}
-
 ::selection {
   background-color: transparent;
   color: transparent;
@@ -86,12 +69,11 @@ a:hover {
 .about {
   position: relative;
   z-index: 1;
-  width: 20em;
-  padding: 0.12em;
-  border-radius: 2em;
-  box-shadow: 0 0 1em #CFCFCF;
-  background-color: #fff;
-  transition: 0.3s;
+  padding: 1em;
+  border-radius: 5em;
+  border: 1px solid #8C8EFF;
+  box-shadow: 0 0 1.6em var(--black);
+  background-color: var(--background-color);
 }
 
 .about__head-note {
@@ -102,8 +84,8 @@ a:hover {
 }
 
 .head-note__logo {
-  width: 3.5em;
-  height: 3.5em;
+  width: 4em;
+  height: 4em;
   fill: var(--color);
 }
 
@@ -111,25 +93,4 @@ a:hover {
   margin: 0;
   margin-left: 0.6em;
   font-size: 1.2em;
-}
-
-.about__skills {
-  padding: 1.2rem;
-}
-
-.about__skills__title {
-  margin: 0.4rem;
-  margin-bottom: 1em;
-}
-
-.about__skills__lits {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.about__skills__lits li {
-  margin: 0.4rem;
-  padding: 0.6em;
-  border-radius: 0.6em;
-  box-shadow: 0 0 .3em #CFCFCF;
 }
