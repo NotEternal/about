@@ -47,7 +47,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  box-shadow: inset 0 0 3em var(--black);
   background-color: var(--background-color);
   color: var(--color);
 }
@@ -61,12 +61,48 @@ button {
   font-family: inherit;
 }
 
+main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 ::selection {
   background-color: transparent;
   color: transparent;
 }
 
+.main__left,
+.main__right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.main__left .circle,
+.main__right .circle {
+  padding: 1em;
+  border-radius: 5em;
+  border: 1px solid #8C8EFF;
+  box-shadow: 0 0 1.6em var(--black);
+  background-color: var(--background-color);
+}
+
+.main__left .circle:nth-child(3),
+.main__right .circle:nth-child(1)  {
+  padding: 3em;
+}
+
+.main__left .circle:nth-child(2),
+.main__right .circle:nth-child(2)  {
+  padding: 2em;
+}
+
 .about {
+  min-width: 22em;
+  margin: 2em;
   position: relative;
   z-index: 1;
   padding: 1em;
