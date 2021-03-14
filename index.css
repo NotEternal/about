@@ -42,7 +42,7 @@ html {
 body {
   min-height: 100vh;
   margin: 0;
-  padding: 10%;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,7 +62,10 @@ button {
 }
 
 main {
-  width: 100%;
+  position: relative;
+  padding: 3rem;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -75,14 +78,82 @@ main {
 
 .main__left,
 .main__right {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
 
+.main__top,
+.main__bottom {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__top {
+  top: 0;
+}
+
+.main__bottom {
+  bottom: 0;
+}
+
+.main__left::before,
+.main__right::before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  transform: translateY(-50%);
+  height: .1em;
+  width: 100%;
+  border-radius: 50%;
+  background-color: #8C8EFF;
+}
+
+.main__top::before,
+.main__bottom::before {
+  position: absolute;
+  content: '';
+  left: 50%;
+  transform: translateX(-50%);
+  width: .1em;
+  height: 100%;
+  background-color: #8C8EFF;
+}
+
+.main__left::before {
+  right: 0%;
+}
+
+.main__right::before {
+  left: 0%;
+}
+
 .main__left .circle,
 .main__right .circle {
+  position: relative;
+  z-index: 1;
+  padding: 1em;
+  border-radius: 5em;
+  border: 1px solid #8C8EFF;
+  box-shadow: 0 0 1.6em var(--black);
+  background-color: var(--background-color);
+}
+
+.main__top .circle,
+.main__bottom .circle {
+  width: 4em;
+  height: 4em;
+  position: relative;
+  z-index: 1;
   padding: 1em;
   border-radius: 5em;
   border: 1px solid #8C8EFF;
